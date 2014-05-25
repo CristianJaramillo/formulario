@@ -79,10 +79,10 @@ echo "</table></body></html>";
 <br/>
 <form action="modificar.php" method="post">
 <legend>Modificar</legend>
-<input type="number" placeholder="id" name="idn">
-<!--<input type="text" placeholder="Nuevo Nombre" name="nomn" value="">		-->	
-<input type="text" placeholder="Nueva Direccion" name="dirn">
-<input type="text" placeholder="Nuevo Telefono" name="teln">			
+<input type="number" placeholder="id" name="idn"> <br />
+<input type="text" placeholder="Nuevo Nombre" name="nomn" value="">		
+<input type="text" placeholder="Nueva Dirección" name="dirn">
+<input type="text" placeholder="Nuevo Teléfono" name="teln">			
 <input type="email" placeholder="Nuevo Email" name="emailn" required="required"> 
 <!--  -->
 <br>
