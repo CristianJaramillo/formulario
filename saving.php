@@ -78,18 +78,18 @@ printf("El último registro insertado tiene el id %d\n", mysql_insert_id());
 <br/>
 <form action="modificar.php" method="post">
 <legend>Modificar</legend>
-<input type="text" placeholder="id" name="idn">
+<input type="number" placeholder="id" name="idn">
 <!--<input type="text" placeholder="Nuevo Nombre" name="nomn" value="">		-->	
 <input type="text" placeholder="Nueva Direccion" name="dirn">
 <input type="text" placeholder="Nuevo Telefono" name="teln">			
-<input type="text" placeholder="Nuevo Email" name="emailn"> 
+<input type="email" placeholder="Nuevo Email" name="emailn" required="required"> 
 <!--  -->
 <br>
 <input type="submit" class="btn btn-lg btn-success" value="Modificar">
 </form>
 <form action="eliminar.php" method="post">
 <legend>Eliminar</legend>
-<input type="text" placeholder="Id" name="ide"> <br>
+<input type="number" placeholder="Id" name="ide" required="required"> <br>
 <input type="submit" class="btn btn-lg btn-danger" value="Eliminar">
 <form>
 <legend>Agregar nuevo registro</legend>

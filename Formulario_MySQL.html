@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+ <meta charset="utf-8"/>
 <meta charset="iso-8859-1">
 <title>Formulario_MySQL</title>
 <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
@@ -13,7 +14,6 @@
                  	color: #fff;
                  }
 </style>
-
 </head>
        <body>
 
@@ -29,14 +29,14 @@
 <label for="UserInfo_FirstName"><h5>Nombre: </h5></label>
 <input type="text" name="nom">
 							
-<label for="UserInfo_LastName"><h5>Direccion: </h5></label>
+<label for="UserInfo_LastName"><h5>Dirección: </h5></label>
 <input type="text" name="dir">
 							
 <label for="UserInfo_Telefono"><h5>Telefono: </h5></label>
 <input type="text" name="tel">
 
 <label for="UserInfor_Email"><h5>Email:</h5></label>
-<input type="text" name="email">
+<input type="email" name="email" required="required">
 <br>
 <input type="submit" class="btn btn-lg btn-default" value="Registrar">
 <input type="reset" class="btn btn-lg btn-default" value="Limpiar">

@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+ <meta charset="utf-8"/>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Consultar</title>
 <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
@@ -55,7 +56,7 @@ echo "<html>
 				<tr><td>Id</td><td>Nombre</td><td>Direcci&oacute;n</td><td>Telefono</td><td>Email</td></tr>";
 $i = 0 ; //iniciamos nuestro cont en cero
 /*el siguiente bucle nos permite obtener la informacion obtenida
-de la ejecución de la sentencia de sql */
+de la ejecuciÃ³n de la sentencia de sql */
 while ($row = mysql_fetch_row($resultado)){
 			echo "<tr><td><input type='hidden' name='id[$i]' value='".$row[0]."' />".$row[0]."</td>
 			          <td><input type='text' name='nombre[$i]' value='".$row[1]."' /></td>
@@ -70,16 +71,16 @@ echo "</table></body></html>";
 <br/>
 <form action="modificar.php" method="post">
 <legend>Modificar</legend>
-<input type="text" placeholder="id" name="idn">
+<input type="number" placeholder="id" name="idn">
 <!--<input type="text" placeholder="Nuevo Nombre" name="nomn" value="">		-->	
 <input type="text" placeholder="Nueva Direccion" name="dirn">
 <input type="text" placeholder="Nuevo Telefono" name="teln">			
-<input type="text" placeholder="Nuevo Email" name="emailn"> <br />
+<input type="email" placeholder="Nuevo Email" name="emailn" required="required"> <br />
 <input type="submit" class="btn btn-lg btn-success" value="Modificar">
 </form> 
 <form action="eliminar.php" method="post">
 <legend>Eliminar</legend>
-<input type="text" placeholder="Id" name="ide"> <br>
+<input type="number" placeholder="Id" name="ide" required="required"> <br>
 <input type="submit" class="btn btn-lg btn-danger" value="Eliminar">
 </form>
 <form>
