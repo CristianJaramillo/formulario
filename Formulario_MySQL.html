@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="iso-8859-1">
+<title>Formulario_MySQL</title>
+<link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+<style>
+           body {
+          background: black;
+             /* padding-top: 60px */
+                 }
+                 h2,h5 {
+                 	color: #fff;
+                 }
+</style>
+
+</head>
+       <body>
+
+<div class="container">
+<div class="row">
+<div class="span12">
+				
+<h2>FORMULARIO</h2>
+<form class="contact_form" action="saving.php" method="post" >		
+<fieldset>
+<legend>Informaci&oacute;n personal</legend>
+
+<label for="UserInfo_FirstName"><h5>Nombre: </h5></label>
+<input type="text" name="nom">
+							
+<label for="UserInfo_LastName"><h5>Direccion: </h5></label>
+<input type="text" name="dir">
+							
+<label for="UserInfo_Telefono"><h5>Telefono: </h5></label>
+<input type="text" name="tel">
+
+<label for="UserInfor_Email"><h5>Email:</h5></label>
+<input type="text" name="email">
+<br>
+<input type="submit" class="btn btn-lg btn-default" value="Registrar">
+<input type="reset" class="btn btn-lg btn-default" value="Limpiar">
+</fieldset>
+</form>
+<form action="consulta.php">
+<legend>Consultar</legend>
+<!--  <input type="text" placeholder="Idc">--> <br>
+	<input type="submit" class="btn btn-lg btn-primary" value="Consultar">
+</form>
+<!-- 
+<form action="eliminar.php" method="post">
+<legend>Eliminar</legend>
+<input type="text" placeholder="Id" name="ide"> <br>
+<input type="submit" class="btn btn-lg btn-danger" value="Eliminar">
+</form>
+<form action="modificar.php" method="post">
+<legend>Modificar</legend>
+<input type="text" placeholder="id" name="idn">
+-->
+<!--<input type="text" placeholder="Nuevo Nombre" name="nomn" value="">		<input type="text" placeholder="Nueva Direccion" name="dirn">
+<input type="text" placeholder="Nuevo Telefono" name="teln">			
+<input type="text" placeholder="Nuevo Email" name="emailn"> 
+<br>
+<input type="submit" class="btn btn-lg btn-success" value="Modificar">
+</form>
+-->	
+</body>
+</html>

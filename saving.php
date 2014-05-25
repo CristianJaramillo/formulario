@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Guardar</title>
+<style type="text/css">
+#header {
+	background-color: #000;
+	height: 150px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+}
+#formulario {
+	width: 600px;
+	position: absolute;
+	top: 151px;
+	left: 50%;
+	margin-left: -600px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	color: #333;
+}
+#header #titulo {
+	color: #FFF;
+	text-align: center;
+	top: 30px;
+	position: relative;
+}
+</style>
+</head>
+
+<body>
+<div id="header"><h1 id="titulo">Formulario</h1></div>
+
+<div id="formulario">
+  <? 
+require ("conexion.php");
+
+//Recibimos los parametros enviados mediante POST por el Formulario
+$nombre = $_POST["nom"];
+$direccion = $_POST["dir"];
+$telefono = $_POST["tel"];
+$correo = $_POST["email"];
+
+// Se insertan los datos recibidos de la pagina del formulario con la funcion 'mysql_query'
+mysql_query("INSERT INTO cliente (nombre, direccion, telefono, email) values ('$nombre','$direccion','$telefono', '$correo')");
+// mysql_close() es el evivalente a mysqli_close() sirve para finalizar la conexión.
+$sql = "SELECT * FROM cliente";
+
+$resultado = mysql_query($sql);
+/*ahora creamos la tabla en html para mostrar los resultados
+agregandole un par de botones de radio */
+echo "<html>
+		<h1>REGISTROS</h1>
+		<body>
+		
+			<table>
+				<tr><td>Id</td><td>Nombre</td><td>Direcci&oacute;n</td><td>Telefono</td><td>Email</td></tr>";
+$i = 0 ; //iniciamos nuestro cont en cero
+/*el siguiente bucle nos permite obtener la informacion obtenida
+de la ejecución de la sentencia de sql */
+while ($row = mysql_fetch_row($resultado)){
+			echo "<tr><td><input type='hidden' name='id[$i]' value='".$row[0]."' />".$row[0]."</td>
+			          <td><input type='text' name='nombre[$i]' value='".$row[1]."' /></td>
+					  <td><input type='text' name='usuario[$i]' value='".$row[2]."'/></td>
+					  <td><input type='text' name='correo[$i]' value='".$row[3]."'/></td>
+					  <td><input type='text' name='telefono[$i]' value='".$row[4]."'/></td>
+					  
+					  </tr>";$i++; 
+}
+echo "</table></body></html>";
+printf("El último registro insertado tiene el id %d\n", mysql_insert_id());
+//mysql_close($enlace);
+?>
+<br/>
+<form action="modificar.php" method="post">
+<legend>Modificar</legend>
+<input type="text" placeholder="id" name="idn">
+<!--<input type="text" placeholder="Nuevo Nombre" name="nomn" value="">		-->	
+<input type="text" placeholder="Nueva Direccion" name="dirn">
+<input type="text" placeholder="Nuevo Telefono" name="teln">			
+<input type="text" placeholder="Nuevo Email" name="emailn"> 
+<!--  -->
+<br>
+<input type="submit" class="btn btn-lg btn-success" value="Modificar">
+</form>
+<form action="eliminar.php" method="post">
+<legend>Eliminar</legend>
+<input type="text" placeholder="Id" name="ide"> <br>
+<input type="submit" class="btn btn-lg btn-danger" value="Eliminar">
+<form>
+<legend>Agregar nuevo registro</legend>
+<a href="formulario_MySQL.html"><input class="btn btn-lg btn-primary" value="Nuevo"></a>
+</form>
+</div>
+
+</body>
+</html>
