@@ -68,10 +68,12 @@ while ($row = mysql_fetch_row($resultado)){
 }
 echo "</table></body></html>";
 ?>
+<div class="span12">
 <br/>
 <form action="modificar.php" method="post">
 <legend>Modificar</legend>
-<input type="number" placeholder="id" name="idn" required="required"> <br />
+<label for="idn">Que registro desea modificar: </label>
+<input id="idn" type="number" placeholder="id" name="idn" required="required"> <br />
 <input type="text" placeholder="Nuevo Nombre" name="nomn" value="">
 <input type="text" placeholder="Nueva Dirección" name="dirn">
 <input type="text" placeholder="Nuevo Teléfono" name="teln">			
