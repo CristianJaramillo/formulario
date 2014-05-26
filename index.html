@@ -10,7 +10,7 @@
           background: #BA2CA5;
              /* padding-top: 60px */
                  }
-                 h2,h5 {
+                 h2,h5,p {
                  	color: #fff;
                  }
 </style>
@@ -20,15 +20,15 @@
 
 <div class="container">
 <div class="row">
-<div class="span4"></div>
-<div class="span4">
+<div class="span3"></div>
+<div class="span6">
 				
-<h2>FORMULARIO</h2>
-<form class="contact_form" action="saving.php" method="post" >		
+<h2 align="center">FORMULARIO</h2>
+<legend align="center">Informaci&oacute;n personal de registro</legend>
+<form class="contact_form" action="saving.php" method="post">
 <fieldset>
-<legend>Informaci&oacute;n personal de registro</legend>
 
-<label for="UserInfo_FirstName"><h5>Nombre: </h5></label>
+<p>Nombre:</p>
 <input type="text" name="nom">
 							
 <label for="UserInfo_LastName"><h5>Direccion: </h5></label>
@@ -40,8 +40,16 @@
 <label for="UserInfor_Email"><h5>Email:</h5></label>
 <input type="text" name="email">
 <br>
-<input type="submit" class="btn btn-lg btn-default" value="Registrar">
-<input type="reset" class="btn btn-lg btn-default" value="Limpiar">
+<div class="container">
+  <div class="row">
+    <div class="span1">
+      <input type="submit" class="btn btn-lg btn-default" value="Registrar">
+    </div>
+    <div class="span1">
+      <input type="reset" class="btn btn-lg btn-default" value="Limpiar">
+    </div>
+  </div>
+</div>
 </fieldset>
 </form>
 <form action="consulta.php">
