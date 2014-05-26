@@ -2,6 +2,7 @@
 | id_cliente  | Nombre           | Direccion    | Telefono     |
 | :---------: |:---------------: | :----------: | :----------: |
 | 1           |   Cristian       | Tecnologico  | 3521130834   |
+| 2           |   Omar       | Tecnologico  | 3521131678   |
 
 >___
 >Pagina de **PHP** administrada con una Base de datos 
