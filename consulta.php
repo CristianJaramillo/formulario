@@ -84,7 +84,7 @@ echo "</table></body></html>";
 </form>
 <form>
 <legend>Agregar nuevo registro</legend>
-<a href="formulario_MySQL.html"><input class="btn btn-lg btn-primary" value="Nuevo"></a>
+<a href="index.html"><input class="btn btn-lg btn-primary" value="Nuevo"></a>
 </form>
 </div>
 </body>
