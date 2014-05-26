@@ -1,0 +1,123 @@
+<!doctype html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation | Welcome</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <script src="js/vendor/modernizr.js"></script>
+    <style type="text/css">
+h1 { text-align: center; }
+td { padding: 0.2em 2em ; }
+</style>
+  </head>
+  <body>
+    
+    <div class="row">
+      <div class="large-12 columns">
+        <h1>Formulario</h1>
+      </div>
+    </div>    
+
+    <div class="row">
+      <div class="large-8 medium-8 columns">        
+        <!-- Grid Example -->          
+        <hr />                      
+          <form id="form1" name="form1" method="post" action="saving.php">
+
+    <input name="nom" type="text"  placeholder="Nombre"/>
+    <input name="usuario" type="text" id="textfield" placeholder="Usuario"/>
+    <input name="password" type="password" id="textfield" placeholder="Password"/>
+    <input name="confpassword" type="password" id="textfield" placeholder="Confirmar Password"/>
+    <input type="email" name="correo" id="textfield" placeholder="Correo"/>
+    <input type="email" name="confcorreo" id="textfield"  placeholder="Confirmar Correo"/>
+    <input type="tel" name="telefono" id="textfield" placeholder="Telefono"/>
+    
+      <input type="submit" name="button" id="button" class="medium radius button" value="Registrar" />      
+      
+  </form>
+  </div>        
+<!--         <form>
+				  <div class="row">
+				    <div class="large-8 columns">				      
+				      <input type="text" placeholder="Nombre" />
+				    </div>
+				  </div>
+          <div class="row">
+            <div class="large-8 columns">             
+              <input type="text" placeholder="Apellidos" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-8 columns">             
+              <input type="text" placeholder="E-mail" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-5 columns">             
+              <input type="text" placeholder="Contraseña" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-6 medium-6 columns">
+              <label>Sexo</label>
+              <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Hombre</label>
+              <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Mujer</label>
+            </div>             
+            <div class="large-6 medium-6 columns">
+              <label>Interesado en los siguientes temas</label>
+              <input id="checkbox1" type="checkbox"><label for="checkbox1">Musica</label>
+              <input id="checkbox2" type="checkbox"><label for="checkbox2">Deportes</label>
+              <input id="checkbox3" type="checkbox"><label for="checkbox3">Cine</label><br>
+              <input id="checkbox4" type="checkbox"><label for="checkbox4">Libros</label>
+              <input id="checkbox5" type="checkbox"><label for="checkbox5">Ciencia</label>
+            </div>           
+          </div>
+
+				  <div class="row">
+				    <div class="large-12 columns">
+				      <label>Dias de la semana</label>
+				      <select>
+				        <option value="luner">Lunes</option>
+				        <option value="martes">Martes</option>
+				        <option value="miercoles">Miercoles</option>
+				        <option value="jueves">Jueves</option>
+                <option value="viernes">Viernes</option>
+                <option value="sabado">Sabado</option>
+                <option value="domingo">Domingo</option>
+				      </select>
+				    </div>
+				  </div>
+				  
+				  <div class="row">
+				    <div class="large-12 columns">
+				      <label>Opiniones de este formulario</label>
+				      <textarea placeholder="small-12.columns"></textarea>
+				    </div>
+				  </div>
+				</form> -->
+      
+
+      <div class="large-4 medium-4 columns">
+        <h5>Opciones con el campo Usuario en la BD:</h5>        
+          <form  action="consulta.php">
+    <input type="submit" name="button" id="button" class="medium success button" value="Consultar" />        
+  </form>
+  <form id="form1" name="form1" method="post" action="eliminar.php">
+  <input name="usuario" type="text" id="textfield" placeholder="Eliminar Usuario"/>
+    <input type="submit" name="button" id="button" class="medium alert button" value="Eliminar" />
+  </form>
+  <form action="modificar.php">
+    <input type="submit" name="button" id="button" class="medium secondary button" value="Modificar" />
+  </form>
+      </div>
+    </div>
+    
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+    </form>
+  </body>
+</html>

@@ -1,123 +1,72 @@
-<!doctype html>
-<html class="no-js" lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foundation | Welcome</title>
-    <link rel="stylesheet" href="css/foundation.css" />
-    <script src="js/vendor/modernizr.js"></script>
-    <style type="text/css">
-h1 { text-align: center; }
-td { padding: 0.2em 2em ; }
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="iso-8859-1">
+<title>Formulario_MySQL</title>
+<link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+<link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet" />
+<style>
+           body {
+          background: #BA2CA5;
+             /* padding-top: 60px */
+                 }
+                 h2,h5 {
+                 	color: #fff;
+                 }
 </style>
-  </head>
-  <body>
-    
-    <div class="row">
-      <div class="large-12 columns">
-        <h1>Formulario</h1>
-      </div>
-    </div>    
 
-    <div class="row">
-      <div class="large-8 medium-8 columns">        
-        <!-- Grid Example -->          
-        <hr />                      
-          <form id="form1" name="form1" method="post" action="saving.php">
+</head>
+       <body>
 
-    <input name="nom" type="text"  placeholder="Nombre"/>
-    <input name="usuario" type="text" id="textfield" placeholder="Usuario"/>
-    <input name="password" type="password" id="textfield" placeholder="Password"/>
-    <input name="confpassword" type="password" id="textfield" placeholder="Confirmar Password"/>
-    <input type="email" name="correo" id="textfield" placeholder="Correo"/>
-    <input type="email" name="confcorreo" id="textfield"  placeholder="Confirmar Correo"/>
-    <input type="tel" name="telefono" id="textfield" placeholder="Telefono"/>
-    
-      <input type="submit" name="button" id="button" class="medium radius button" value="Registrar" />      
-      
-  </form>
-  </div>        
-<!--         <form>
-				  <div class="row">
-				    <div class="large-8 columns">				      
-				      <input type="text" placeholder="Nombre" />
-				    </div>
-				  </div>
-          <div class="row">
-            <div class="large-8 columns">             
-              <input type="text" placeholder="Apellidos" />
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-8 columns">             
-              <input type="text" placeholder="E-mail" />
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-5 columns">             
-              <input type="text" placeholder="Contraseña" />
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-6 medium-6 columns">
-              <label>Sexo</label>
-              <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Hombre</label>
-              <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Mujer</label>
-            </div>             
-            <div class="large-6 medium-6 columns">
-              <label>Interesado en los siguientes temas</label>
-              <input id="checkbox1" type="checkbox"><label for="checkbox1">Musica</label>
-              <input id="checkbox2" type="checkbox"><label for="checkbox2">Deportes</label>
-              <input id="checkbox3" type="checkbox"><label for="checkbox3">Cine</label><br>
-              <input id="checkbox4" type="checkbox"><label for="checkbox4">Libros</label>
-              <input id="checkbox5" type="checkbox"><label for="checkbox5">Ciencia</label>
-            </div>           
-          </div>
+<div class="container">
+<div class="row">
+<div class="span4"></div>
+<div class="span4">
+				
+<h2>FORMULARIO</h2>
+<form class="contact_form" action="saving.php" method="post" >		
+<fieldset>
+<legend>Informaci&oacute;n personal de registro</legend>
 
-				  <div class="row">
-				    <div class="large-12 columns">
-				      <label>Dias de la semana</label>
-				      <select>
-				        <option value="luner">Lunes</option>
-				        <option value="martes">Martes</option>
-				        <option value="miercoles">Miercoles</option>
-				        <option value="jueves">Jueves</option>
-                <option value="viernes">Viernes</option>
-                <option value="sabado">Sabado</option>
-                <option value="domingo">Domingo</option>
-				      </select>
-				    </div>
-				  </div>
-				  
-				  <div class="row">
-				    <div class="large-12 columns">
-				      <label>Opiniones de este formulario</label>
-				      <textarea placeholder="small-12.columns"></textarea>
-				    </div>
-				  </div>
-				</form> -->
-      
+<label for="UserInfo_FirstName"><h5>Nombre: </h5></label>
+<input type="text" name="nom">
+							
+<label for="UserInfo_LastName"><h5>Direccion: </h5></label>
+<input type="text" name="dir">
+							
+<label for="UserInfo_Telefono"><h5>Telefono: </h5></label>
+<input type="text" name="tel">
 
-      <div class="large-4 medium-4 columns">
-        <h5>Opciones con el campo Usuario en la BD:</h5>        
-          <form  action="consulta.php">
-    <input type="submit" name="button" id="button" class="medium success button" value="Consultar" />        
-  </form>
-  <form id="form1" name="form1" method="post" action="eliminar.php">
-  <input name="usuario" type="text" id="textfield" placeholder="Eliminar Usuario"/>
-    <input type="submit" name="button" id="button" class="medium alert button" value="Eliminar" />
-  </form>
-  <form action="modificar.php">
-    <input type="submit" name="button" id="button" class="medium secondary button" value="Modificar" />
-  </form>
-      </div>
-    </div>
-    
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/foundation.min.js"></script>
-    <script>
-      $(document).foundation();
-    </script>
-    </form>
-  </body>
+<label for="UserInfor_Email"><h5>Email:</h5></label>
+<input type="text" name="email">
+<br>
+<input type="submit" class="btn btn-lg btn-default" value="Registrar">
+<input type="reset" class="btn btn-lg btn-default" value="Limpiar">
+</fieldset>
+</form>
+<form action="consulta.php">
+	<input type="submit" class="btn btn-lg btn-primary" value="Consultar">
+</form>
+</div>
+
+</div>
+</div>
+<!-- 
+<form action="eliminar.php" method="post">
+<legend>Eliminar</legend>
+<input type="text" placeholder="Id" name="ide"> <br>
+<input type="submit" class="btn btn-lg btn-danger" value="Eliminar">
+</form>
+<form action="modificar.php" method="post">
+<legend>Modificar</legend>
+<input type="text" placeholder="id" name="idn">
+-->
+<!--<input type="text" placeholder="Nuevo Nombre" name="nomn" value="">		<input type="text" placeholder="Nueva Direccion" name="dirn">
+<input type="text" placeholder="Nuevo Telefono" name="teln">			
+<input type="text" placeholder="Nuevo Email" name="emailn"> 
+<br>
+<input type="submit" class="btn btn-lg btn-success" value="Modificar">
+</form>
+-->	
+</body>
 </html>

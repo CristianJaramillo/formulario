@@ -15,7 +15,7 @@ CREATE TABLE `cliente` (
   `id_cliente` int(9) NOT NULL auto_increment,
   `nombre` varchar(40) NOT NULL,
   `direccion` varchar(30) NOT NULL,
-  `telefono` varchar(10) NOT NULL,
+  `telefono` varchar(12) NOT NULL,
   `email` varchar(30) NOT NULL,
   PRIMARY KEY  (`id_cliente`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
